@@ -51,16 +51,11 @@ auto split(std::string files_string, char str) {
   for (int i = 0; i != files_string.length(); i++) {
     if (files_string[i] == str) {
       o.push_back(s);
-      std::cout << "s: " + s << std::endl;
       s = "";
     }
     else {
-      std::cout << "Push s \n";
       s.push_back(files_string[i]);
     }
-  }
-  for (auto it = o.begin(); it != o.end(); it++) {
-    std::cout << *it << std::endl;
   }
   return o;
 }
